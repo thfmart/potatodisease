@@ -47,12 +47,12 @@
             android:layout_marginEnd="24dp"
             android:text=""
             android:textColor="#A2A3A3"
-            app:layout_constraintEnd_toStartOf="@+id/imageView2"
+            app:layout_constraintEnd_toStartOf="@+id/disease_icon"
             app:layout_constraintStart_toStartOf="@+id/disease_name"
             app:layout_constraintTop_toBottomOf="@+id/disease_name" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/disease_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/disease"

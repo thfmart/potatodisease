@@ -42,6 +42,7 @@ dependencies {
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.0"
     def camerax_version = "1.1.0-beta01"
     implementation "androidx.camera:camera-core:${camerax_version}"
     implementation "androidx.camera:camera-camera2:${camerax_version}"
@@ -50,4 +51,18 @@ dependencies {
 
     implementation "androidx.camera:camera-view:${camerax_version}"
     implementation "androidx.camera:camera-extensions:${camerax_version}"
+
+    implementation 'org.koin:koin-android:2.1.6'
+    implementation 'org.koin:koin-androidx-viewmodel:2.1.6'
+
+    def koin_version = "3.1.2"
+    implementation "io.insert-koin:koin-core:$koin_version"
+    implementation "io.insert-koin:koin-android:$koin_version"
+    implementation "io.insert-koin:koin-android-compat:$koin_version"
+
+    def tflite_version = "2.9.0"
+    implementation "org.tensorflow:tensorflow-lite:$tflite_version"
+    implementation "org.tensorflow:tensorflow-lite-gpu:$tflite_version"
+    implementation "org.tensorflow:tensorflow-lite-metadata:0.4.1"
+    implementation "org.tensorflow:tensorflow-lite-support:0.4.1"
 }
