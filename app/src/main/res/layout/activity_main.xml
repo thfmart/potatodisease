@@ -31,7 +31,6 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
             android:layout_marginTop="24dp"
-            android:text=""
             android:textColor="@android:color/primary_text_dark"
             android:textColorHighlight="@android:color/white"
             android:textColorHint="@color/purple_500"
@@ -45,7 +44,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:layout_marginEnd="24dp"
-            android:text=""
             android:textColor="#A2A3A3"
             app:layout_constraintEnd_toStartOf="@+id/disease_icon"
             app:layout_constraintStart_toStartOf="@+id/disease_name"
@@ -53,8 +51,8 @@
 
         <ImageView
             android:id="@+id/disease_icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:contentDescription="@string/disease"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"

@@ -52,9 +52,6 @@ dependencies {
     implementation "androidx.camera:camera-view:${camerax_version}"
     implementation "androidx.camera:camera-extensions:${camerax_version}"
 
-    implementation 'org.koin:koin-android:2.1.6'
-    implementation 'org.koin:koin-androidx-viewmodel:2.1.6'
-
     def koin_version = "3.1.2"
     implementation "io.insert-koin:koin-core:$koin_version"
     implementation "io.insert-koin:koin-android:$koin_version"

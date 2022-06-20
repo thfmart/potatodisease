@@ -14,6 +14,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.content.res.AppCompatResources
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageAnalysis
 import androidx.camera.core.ImageProxy
@@ -47,18 +48,18 @@ class MainActivity: AppCompatActivity() {
                 this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS)
         }
         cameraExecutor = Executors.newSingleThreadExecutor()
-
+        initObservables()
     }
 
     /** Observables for Main Activity. */
     private fun initObservables() {
         viewModel.classifierResult.observe(this){
             if (it.idx != 0) {
-                binding.diseaseName.text = it.name
+                binding.diseaseName.text = it.title
                 binding.diseaseDescription.text = it.description
-                binding.diseaseIcon.setImageBitmap(it.icon)
+                binding.diseaseIcon.setImageDrawable(AppCompatResources.getDrawable(this, it.picture))
             }else{
-                val bd = BitmapDrawable(it.icon)
+                val bd = BitmapDrawable()
                 bd.alpha = 100
                 binding.diseaseIcon.setImageDrawable(bd)
                 binding.diseaseName.text = ""

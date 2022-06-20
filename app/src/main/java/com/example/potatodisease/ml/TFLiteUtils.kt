@@ -1,7 +1,6 @@
 package com.example.potatodisease.ml
 
 import android.graphics.Bitmap
-import android.util.Log
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.Interpreter
 import org.tensorflow.lite.gpu.CompatibilityList
@@ -9,6 +8,7 @@ import org.tensorflow.lite.gpu.GpuDelegate
 import org.tensorflow.lite.support.tensorbuffer.TensorBuffer
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
+import java.util.*
 
 
 class TFLiteUtils {
@@ -43,7 +43,6 @@ class TFLiteUtils {
         val numThreads = Runtime.getRuntime().availableProcessors();
         opt.numThreads = numThreads;
         val interpreter = Interpreter(tfLiteModel, opt)
-        Log.d(tag, "Initialized GPU delegate for model ${PotatoDiseaseClassifier.TFLITE_FILENAME}")
         return interpreter
     }
 
